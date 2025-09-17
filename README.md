@@ -2,285 +2,297 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-  <title>Easy Service Jodhpur — AC, Geyser, Washing Machine & Electrical Repair</title>
-  <meta name="description" content="Easy Service Jodhpur — 24/7 AC repair, geyser service, washing machine repair, electrician and plumbing. Professional technicians. Call or WhatsApp now!" />
-  <meta name="keywords" content="AC service, AC repair, geyser service, geyser repair, washing machine service, washing machine repair, electrician service, plumbing service, Jodhpur" />
-  <meta name="theme-color" content="#0f2347" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Easy Service Jodhpur — AC, Geyser & Washing Machine Repair</title>
+  <meta name="description" content="Easy Service Jodhpur — 24/7 AC repair, geyser service, washing machine repair, electrician and plumbing. Call or WhatsApp to book. Expert: Javed Khan." />
+  <meta name="keywords" content="AC service, AC repair, geyser service and repairing, washing machine repair, electrician service, Jodhpur" />
+  <meta name="theme-color" content="#1a1f4b" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --accent:#0f2347;--accent-2:#0b5f73;--bg:#f4f6f8;--card:#ffffff;--muted:#556075;
-      --cta-height:52px; --gutter:14px; --radius:12px;
+      --bg1:#1a1f4b;
+      --bg2:#2b4c7e;
+      --accent1:#39a1ff;
+      --accent2:#6a60ff;
+      --glass: rgba(255,255,255,0.06);
+      --muted: rgba(255,255,255,0.85);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family:Inter,system-ui,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#eef3f6);margin:0;color:var(--accent);-webkit-font-smoothing:antialiased;line-height:1.45}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    body{
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+      background: linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:#fff;
+      text-align:center;
+    }
 
-    /* header */
-    header{background:var(--card);padding:12px var(--gutter);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:60;border-bottom:1px solid rgba(15,23,42,0.06)}
-    .brand{display:flex;gap:10px;align-items:center}
-    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;display:flex;align-items:center;justify-content:center;font-weight:900}
-    nav{display:flex;gap:8px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:700;font-size:14px}
+    /* Header / phone safe area */
+    header{
+      padding:18px 20px 8px;
+      font-weight:800;
+      font-size:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;
+    }
+    .menu{opacity:0.9;font-size:20px}
 
-    /* layout */
-    .container{max-width:980px;margin:16px auto;padding:0 var(--gutter)}
-    .hero{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
-    .hero-left{flex:1;min-width:240px}
-    h1{font-size:20px;margin:0 0 10px}
-    .lead{color:var(--muted);margin:0 0 12px}
+    /* Main screen */
+    .screen{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:6vh 20px 110px;
+    }
+    h1{font-size:22px;margin:6px 0;font-weight:800}
+    p.lead{margin:0 0 18px;color:var(--muted);line-height:1.35;max-width:420px}
 
-    /* quick services */
-    .quick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
-    .service-card{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 20px rgba(11,37,71,0.04);text-align:center;min-height:110px;display:flex;flex-direction:column;justify-content:space-between}
-    .service-card h4{margin:6px 0 4px;font-size:15px}
-    .service-card p{margin:0;color:var(--muted);font-size:13px}
-    .service-card button{margin-top:8px;background:var(--accent);color:#fff;padding:10px;border-radius:8px;border:0;font-weight:700}
+    /* Pill buttons */
+    .pills{width:100%;max-width:420px;display:flex;flex-direction:column;gap:16px;margin-top:6px}
+    .pill{
+      display:inline-block;padding:14px 18px;border-radius:999px;
+      font-weight:800;color:#fff;text-decoration:none;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      box-shadow:0 12px 30px rgba(0,0,0,0.25);
+      min-width:220px;
+    }
+    .pill.secondary{
+      background:transparent;border:1px solid rgba(255,255,255,0.08);
+      box-shadow:none;font-weight:700;color:var(--muted)
+    }
 
-    /* cards + forms */
-    .card{background:var(--card);padding:12px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(11,37,71,0.04)}
-    input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);font-size:15px}
-    .form-row{display:flex;gap:8px;flex-wrap:wrap}
-    .small{color:var(--muted);font-size:14px}
+    .info{margin-top:18px;max-width:420px}
+    .info h3{margin:6px 0 6px}
+    .info p{margin:0;color:rgba(255,255,255,0.86)}
 
-    /* reviews */
-    .reviews-list{display:grid;gap:10px;margin-top:8px}
-    .review-card{background:var(--card);padding:12px;border-radius:10px;border:1px solid #eef2f6}
+    /* Dots nav style */
+    .dots{display:flex;gap:10px;margin-top:22px}
+    .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.2)}
+    .dot.active{background:linear-gradient(90deg,#7bd6ff,#ffd86a);box-shadow:0 8px 20px rgba(0,0,0,0.25)}
 
-    /* sticky action footer for mobile */
-    .bottom-action{position:fixed;left:12px;right:12px;bottom:12px;height:var(--cta-height);display:flex;gap:8px;align-items:center;z-index:80}
-    .btn-call{flex:0 0 56px;background:#25D366;color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;text-decoration:none}
-    .btn-book{flex:1;background:var(--accent);color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;text-decoration:none}
+    /* Booking slide-up panel */
+    .panel{
+      position:fixed;
+      left:0;right:0;
+      bottom:-2px;
+      padding:16px 18px 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      backdrop-filter: blur(8px);
+      border-top-left-radius:18px;
+      border-top-right-radius:18px;
+      box-shadow: 0 -18px 40px rgba(0,0,0,0.45);
+      transform: translateY(110%);
+      transition: transform .36s cubic-bezier(.22,.9,.32,1);
+      z-index:40;
+    }
+    .panel.open{transform: translateY(0);}
+    .panel .handle{width:36px;height:4px;background:rgba(255,255,255,0.22);border-radius:999px;margin:6px auto}
+    .panel h4{margin:8px 0 6px;font-size:18px}
+    input,select,textarea{
+      width:100%;padding:12px;border-radius:10px;border:0;background:var(--glass);color:#fff;margin-top:8px;font-size:15px;
+    }
+    .row{display:flex;gap:8px}
+    .btn-row{display:flex;gap:8px;margin-top:12px}
+    .btn{flex:1;padding:12px;border-radius:10px;border:0;font-weight:800}
+    .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff}
 
-    /* accessible larger tap targets */
-    button, .cta, .btn-call, .btn-book{touch-action:manipulation}
+    /* Floating WhatsApp button */
+    .whatsapp{
+      position:fixed;right:16px;bottom:18px;width:56px;height:56px;border-radius:999px;
+      background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
+      box-shadow:0 12px 36px rgba(0,0,0,0.35);z-index:60;text-decoration:none;font-size:22px;
+    }
 
-    /* responsive */
-    @media(min-width:900px){ h1{font-size:26px} .bottom-action{display:none} }
-    @media(max-width:480px){ .logo{width:40px;height:40px} input,select,textarea{padding:14px;font-size:16px} .service-card{min-height:120px} }
+    footer{padding:14px 10px;color:rgba(255,255,255,0.7);font-size:13px;text-align:center}
+
+    @media(min-width:800px){
+      body{text-align:center}
+      .screen{padding-top:12vh;padding-bottom:120px}
+      .panel{left:50%;max-width:420px;transform:translate(-50%,110%);border-radius:14px}
+      .panel.open{transform:translate(-50%,0)}
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="brand"><div class="logo">ES</div><div><strong>Easy Service</strong><div class="small">24/7 Technicians — Jodhpur</div></div></div>
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="brand">
+      <div class="logo">ES</div>
+      <div style="text-align:left">
+        <div style="font-weight:900">Easy Service</div>
+        <div style="font-size:12px;opacity:0.9">Jodhpur • 24/7</div>
+      </div>
+    </div>
+    <div class="menu" aria-hidden="true">☰</div>
   </header>
 
-  <main class="container" id="app">
-    <section id="home" class="hero">
-      <div class="hero-left">
-        <h1>Reliable AC, Geyser, Washing Machine & Electrical Services</h1>
-        <p class="lead">Fast response, trained technicians and transparent pricing. Expert technician: <strong style="color:var(--accent-2)">Javed Khan</strong>.</p>
+  <div class="screen" role="main">
+    <h1>AC, Geyser & Washing Machine Repair</h1>
+    <p class="lead">Fast 24/7 service at your doorstep. Expert technician: <strong>Javed Khan</strong>.</p>
 
-        <div style="margin:10px 0" class="quick-grid" role="list">
-          <div class="service-card" role="listitem">
-            <div>
-              <h4>AC Service</h4>
-              <p class="small">Repair, gas refill & installations — from ₹500</p>
-            </div>
-            <button data-service="AC Service" class="quick-btn">Book</button>
-          </div>
+    <div class="pills" role="navigation" aria-label="Quick services">
+      <a href="#book" class="pill" id="bookAC" data-service="AC Service">Book AC Service</a>
+      <a href="#book" class="pill" id="bookGeyser" data-service="Geyser Service">Geyser Service & Repair</a>
+      <a href="#book" class="pill" id="bookWash" data-service="Washing Machine Service">Washing Machine Repair</a>
+      <a href="tel:+918387984425" class="pill secondary">Call: +91 83879 84425</a>
+    </div>
 
-          <div class="service-card" role="listitem">
-            <div>
-              <h4>Geyser Service & Repair</h4>
-              <p class="small">Element, thermostat & leak repair — from ₹500</p>
-            </div>
-            <button data-service="Geyser Service" class="quick-btn">Book</button>
-          </div>
+    <div class="info" aria-hidden="false">
+      <h3>Trusted technicians</h3>
+      <p>Uniformed, background-checked, equipped with parts. Transparent pricing and short warranty on workmanship.</p>
+    </div>
 
-          <div class="service-card" role="listitem">
-            <div>
-              <h4>Washing Machine Repair</h4>
-              <p class="small">Motor, belt, inlet valve, diagnostics — from ₹450</p>
-            </div>
-            <button data-service="Washing Machine Service" class="quick-btn">Book</button>
-          </div>
-
-          <div class="service-card" role="listitem">
-            <div>
-              <h4>Electrician</h4>
-              <p class="small">Wiring, MCB, light/fan installation — from ₹400</p>
-            </div>
-            <button data-service="Electrician" class="quick-btn">Book</button>
-          </div>
-        </div>
-
-        <div style="margin-top:14px">
-          <a href="#contact" class="cta">Book a Service</a>
-        </div>
-
-      </div>
-
-      <aside style="width:320px;max-width:40%" class="card" aria-labelledby="quick-title">
-        <h3 id="quick-title">Quick Book</h3>
-        <form id="bookingForm">
-          <label class="small">Service</label>
-          <select id="service" aria-label="Service select">
-            <option>AC Service</option>
-            <option>Geyser Service</option>
-            <option>Washing Machine Service</option>
-            <option>Electrician</option>
-            <option>Plumbing</option>
-          </select>
-
-          <div class="form-row" style="margin-top:8px">
-            <input id="name" type="text" placeholder="Your name" required />
-            <input id="phone" type="tel" inputmode="tel" pattern="[0-9]{10}" placeholder="Phone (10 digits)" required />
-          </div>
-
-          <div class="form-row" style="margin-top:8px">
-            <input id="date" type="date" />
-            <input id="time" type="time" />
-          </div>
-
-          <textarea id="notes" rows="3" placeholder="Issue / landmark (optional)" style="margin-top:8px"></textarea>
-          <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
-            <div style="font-size:13px;color:var(--muted)">Visiting: <strong>₹300</strong></div>
-            <button type="submit" class="cta" style="margin-left:auto;min-height:var(--cta-height);line-height:1">Request</button>
-          </div>
-        </form>
-
-        <div style="margin-top:12px;font-size:13px;color:var(--muted)">Or call/WhatsApp directly:</div>
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <a class="btn-call" href="tel:+918387984425" aria-label="Call">📞</a>
-          <a class="btn-book" href="https://wa.me/918387984425?text=Hello%20Easy%20Service" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-      </aside>
-    </section>
-
-    <section id="reviews" style="margin-top:18px">
-      <h2>Customer reviews</h2>
-      <div class="reviews-list card" id="reviewsList" aria-live="polite"></div>
-      <div style="margin-top:10px" class="card">
-        <h4>Leave a review</h4>
-        <form id="reviewForm">
-          <input id="rname" type="text" placeholder="Your name" required />
-          <input id="rphone" type="tel" inputmode="tel" placeholder="10-digit phone" required />
-          <select id="rservice" style="margin-top:8px">
-            <option>AC Service</option>
-            <option>Geyser Service</option>
-            <option>Washing Machine Service</option>
-            <option>Electrician</option>
-            <option>Plumbing</option>
-          </select>
-          <textarea id="rtext" rows="3" placeholder="Write your review" style="margin-top:8px"></textarea>
-          <div style="margin-top:8px;display:flex;align-items:center;gap:8px">
-            <label class="small">Rating</label>
-            <select id="rrating"><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select>
-            <button class="cta" style="margin-left:auto">Submit review</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section id="services" style="margin-top:18px">
-      <h2>Services & Starting Prices</h2>
-      <div class="quick-grid" style="margin-top:8px">
-        <div class="card"><h4>AC Service & Repair</h4><p class="small">From ₹500 — gas refill, filters, compressor</p></div>
-        <div class="card"><h4>Geyser Service</h4><p class="small">From ₹500 — element, valve, thermostat</p></div>
-        <div class="card"><h4>Washing Machine</h4><p class="small">From ₹450 — motor, belt, inlet valve</p></div>
-        <div class="card"><h4>Electrician</h4><p class="small">From ₹400 — wiring, switchboards</p></div>
-        <div class="card"><h4>Plumbing</h4><p class="small">From ₹300 — leak repair, fittings</p></div>
-      </div>
-    </section>
-
-    <section id="contact" style="margin-top:18px">
-      <h2>Contact</h2>
-      <div class="card">
-        <p class="small">239 Mohan Nagar, B BJS Colony, Jodhpur</p>
-        <p class="small">Call: <a href="tel:+918387984425">+91 83879 84425</a></p>
-        <p class="small">Email: <a href="mailto:nkhan6796@gmail.com">nkhan6796@gmail.com</a></p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Bottom action bar - friendly for Android / mobile -->
-  <div class="bottom-action" role="region" aria-label="Quick actions">
-    <a class="btn-call" href="tel:+918387984425">📞</a>
-    <a class="btn-book" id="openBooking">Book Now</a>
+    <div class="dots" aria-hidden="true">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
   </div>
 
-  <footer style="text-align:center;padding:18px;color:var(--muted);margin-top:18px">© Easy Service — Jodhpur</footer>
+  <!-- Slide-up booking panel -->
+  <div class="panel" id="panel" role="dialog" aria-hidden="true" aria-labelledby="panelTitle">
+    <div class="handle" aria-hidden="true"></div>
+    <h4 id="panelTitle">Request a Visit</h4>
+
+    <form id="bookingForm" autocomplete="off">
+      <label class="sr-only" for="svc">Service</label>
+      <select id="svc" name="service" aria-label="Choose service">
+        <option>AC Service</option>
+        <option>Geyser Service</option>
+        <option>Washing Machine Service</option>
+        <option>Electrician</option>
+        <option>Plumbing</option>
+      </select>
+
+      <div class="row">
+        <input id="bname" name="name" type="text" placeholder="Your name" required aria-required="true" />
+        <input id="bphone" name="phone" type="tel" inputmode="tel" pattern="[0-9]*" placeholder="Phone (10 digits)" required aria-required="true" />
+      </div>
+
+      <div class="row">
+        <input id="bdate" name="date" type="date" />
+        <input id="btime" name="time" type="time" />
+      </div>
+
+      <textarea id="bnotes" name="notes" rows="3" placeholder="Address / landmark / issue (optional)"></textarea>
+
+      <div class="btn-row" role="group" aria-label="Booking actions">
+        <button type="submit" class="btn primary">Request Visit</button>
+        <button type="button" id="cancelPanel" class="btn ghost">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Floating WhatsApp button -->
+  <a id="whatsappBtn" class="whatsapp" href="https://wa.me/918387984425?text=Hello%20Easy%20Service,%20I%20need%20help" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <!-- simple WhatsApp icon (SVG) -->
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.5 3.5C18.9 2 16.8 1 14.5 1 8 1 2.8 6.2 2.8 12.7c0 1.9.5 3.6 1.5 5.2L2 22l3.4-1.1C7.3 21.5 8.9 22 10.8 22 17.3 22 22.5 16.8 22.5 10.3 22.5 8 21.5 5.9 20 4.3L20.5 3.5z" fill="#fff" opacity="0.06"/>
+      <path d="M16.2 14.2c-.3-.1-1.8-.9-2-.9-.4 0-.6.1-.9.4-.3.3-1 .8-1.5 1.1-.6.3-1 .2-1.5-.5-.4-.6-1.5-2-1.5-2.6 0-.6.7-1 .9-1.2.2-.1.5-.3.8-.5.3-.2.5-.3.6-.6.1-.3 0-.6-.1-.9-.1-.3-.9-2.1-1.2-2.9-.3-.7-.7-.6-1-.6-.3 0-.6 0-.9 0-.3 0-.7.1-1 .6s-1.3 1.7-1.3 3.9 1.3 4.5 1.5 4.8c.2.3 2 3.1 5 4.2 3 .9 3.3.6 3.9.5.5-.1 1.8-.7 2-1.5.2-.8.2-1.5.1-1.6-.1-.2-.4-.3-.8-.4z" fill="#fff"/>
+    </svg>
+  </a>
+
+  <footer>© Easy Service — Jodhpur · 24/7</footer>
 
   <script>
-    // Service worker registration (optional; improves PWA behaviour on Android)
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker?.register('/sw.js').catch(()=>{/* sw optional */});
-    }
+    /* Panel open/close and quick service buttons */
+    (function(){
+      const panel = document.getElementById('panel');
+      const svc = document.getElementById('svc');
+      const openAC = document.getElementById('bookAC');
+      const openGeyser = document.getElementById('bookGeyser');
+      const openWash = document.getElementById('bookWash');
+      const cancelBtn = document.getElementById('cancelPanel');
+      const bookingForm = document.getElementById('bookingForm');
+      const whatsappBtn = document.getElementById('whatsappBtn');
 
-    // handle quick buttons to prefill booking form and open contact section on mobile
-    document.querySelectorAll('.quick-btn').forEach(btn=>btn.addEventListener('click', ()=>{
-      const svc = btn.dataset.service;
-      const sel = document.getElementById('service'); if(sel) sel.value = svc;
-      // focus name for quick input
-      const nm = document.getElementById('name'); if(nm){ nm.focus(); }
-      // scroll booking into view on small screens
-      document.getElementById('bookingForm')?.scrollIntoView({behavior:'smooth',block:'center'});
-    }));
+      function openPanel(service){
+        if(service) svc.value = service;
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden','false');
+        setTimeout(()=> document.getElementById('bname').focus(), 250);
+        // update WhatsApp prefill with service
+        updateWhatsappHref(service || svc.value);
+      }
+      function closePanel(){
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden','true');
+        updateWhatsappHref(); // reset to default
+      }
 
-    // bottom bar Book Now behaviour
-    document.getElementById('openBooking').addEventListener('click', ()=>{
-      // on mobile open contact / booking
-      location.hash = '#contact';
-      setTimeout(()=>{ document.getElementById('name')?.focus(); },350);
-    });
+      openAC.addEventListener('click', function(e){ e.preventDefault(); openPanel('AC Service'); });
+      openGeyser.addEventListener('click', function(e){ e.preventDefault(); openPanel('Geyser Service'); });
+      openWash.addEventListener('click', function(e){ e.preventDefault(); openPanel('Washing Machine Service'); });
+      cancelBtn.addEventListener('click', function(){ closePanel(); });
 
-    // booking form handling (local demo)
-    document.getElementById('bookingForm')?.addEventListener('submit', e=>{
-      e.preventDefault();
-      const name=document.getElementById('name').value.trim();
-      const phone=document.getElementById('phone').value.trim();
-      if(!name||!/^\d{10}$/.test(phone)){ alert('Please enter a valid name and 10-digit phone'); return; }
-      const data={service:document.getElementById('service').value,name,phone,date:document.getElementById('date').value,time:document.getElementById('time').value,notes:document.getElementById('notes').value,createdAt:new Date().toISOString()};
-      const reqs=JSON.parse(localStorage.getItem('es_bookings')||'[]'); reqs.unshift(data); localStorage.setItem('es_bookings', JSON.stringify(reqs));
-      alert('Thanks '+name+', we received your request and will contact you.');
-      e.target.reset();
-    });
-
-    // reviews handling (local only) with simple sanitization
-    function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[c]); }
-    const reviewForm=document.getElementById('reviewForm');
-    const reviewsList=document.getElementById('reviewsList');
-    function renderReviews(){
-      const arr=JSON.parse(localStorage.getItem('es_reviews')||'[]'); reviewsList.innerHTML='';
-      if(!arr.length){ reviewsList.innerHTML='<div class="small">No reviews yet. Be the first!</div>'; return; }
-      arr.forEach(r=>{
-        const d=document.createElement('div'); d.className='review-card';
-        d.innerHTML=`<strong>${escapeHtml(r.name)}</strong> <div class="small">${escapeHtml(r.service)}</div><div class="rating">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div><div class="small">${escapeHtml(r.text)}</div>`;
-        reviewsList.appendChild(d);
+      panel.addEventListener('click', function(e){
+        // if clicking on background area of panel (not the form), close
+        if(e.target === panel) closePanel();
       });
-    }
-    reviewForm?.addEventListener('submit', e=>{
-      e.preventDefault();
-      const name=document.getElementById('rname').value.trim();
-      const phone=document.getElementById('rphone').value.trim();
-      const text=document.getElementById('rtext').value.trim();
-      const rating=parseInt(document.getElementById('rrating').value,10)||5;
-      const service=document.getElementById('rservice').value;
-      if(!name||!/^\d{10}$/.test(phone)||!text) return alert('Please fill all fields correctly');
-      const arr=JSON.parse(localStorage.getItem('es_reviews')||'[]'); arr.unshift({name,phone,service,text,rating,createdAt:new Date().toISOString()}); localStorage.setItem('es_reviews',JSON.stringify(arr)); reviewForm.reset(); renderReviews(); alert('Thanks — your review was submitted.');
-    });
-    renderReviews();
 
-    // improve touch targets for Android: ensure tap delay removed (fastclick-like)
-    document.addEventListener('touchstart', function(){}, {passive:true});
+      bookingForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('bname').value.trim();
+        const phone = document.getElementById('bphone').value.trim();
+        if(!name || !/^\d{10}$/.test(phone)){
+          alert('Please enter your name and a valid 10-digit phone number.');
+          return;
+        }
+        const data = {
+          service: svc.value,
+          name,
+          phone,
+          date: document.getElementById('bdate').value,
+          time: document.getElementById('btime').value,
+          notes: document.getElementById('bnotes').value,
+          createdAt: new Date().toISOString()
+        };
+        // save locally for demo (replace with backend later)
+        const arr = JSON.parse(localStorage.getItem('es_bookings') || '[]');
+        arr.unshift(data);
+        localStorage.setItem('es_bookings', JSON.stringify(arr));
+        alert('Thanks ' + name + '. Your request has been received. We will call to confirm.');
+        bookingForm.reset();
+        closePanel();
+      });
 
-    // simple analytics hint (no network calls) - track clicks locally
-    (function(){ window._esClicks = 0; document.addEventListener('click', ()=> window._esClicks++); })();
+      // Update WhatsApp link to include chosen service and optional name/phone
+      function updateWhatsappHref(service){
+        const base = 'https://wa.me/918387984425';
+        const name = encodeURIComponent(document.getElementById('bname').value.trim() || '');
+        const phone = encodeURIComponent(document.getElementById('bphone').value.trim() || '');
+        const svcText = encodeURIComponent(service || svc.value || 'Service');
+        let text = 'Hello Easy Service, I need ' + svcText;
+        if(name) text += '. My name is ' + name;
+        if(phone) text += ' (' + phone + ')';
+        whatsappBtn.href = base + '?text=' + encodeURIComponent(text);
+      }
+
+      // Keep WhatsApp link in sync when user types name/phone/service
+      document.getElementById('bname').addEventListener('input', ()=> updateWhatsappHref());
+      document.getElementById('bphone').addEventListener('input', ()=> updateWhatsappHref());
+      svc.addEventListener('change', ()=> updateWhatsappHref());
+
+      // set default WA href on load
+      updateWhatsappHref();
+
+      // remove 300ms delay on mobile taps
+      document.addEventListener('touchstart', function(){}, {passive:true});
+    })();
   </script>
 </body>
 </html>
